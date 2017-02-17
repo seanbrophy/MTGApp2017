@@ -1,0 +1,31 @@
+<ion-header-bar class="bar-calm">
+  <h1 class="title">Card Info</h1>
+</ion-header-bar>
+
+<ion-content id="mainPost" class="padding">
+
+  <h1>{{cardDetail.name}}</h1>
+
+  <p>Converted Mana Cost: {{cardDetail.cmc}}</p>
+
+  <p>Card Type: {{cardDetail.type}} </p>
+
+  <p>Text: {{cardDetail.text}}</p>
+
+  <p>Flavor Text: {{cardDetail.flavor}}
+      <span data-ng-if="!cardDetail.flavor">N/A</span>
+  </p>
+  <p>Power: {{cardDetail.power}}
+      <span data-ng-if="!cardDetail.power">N/A</span>
+  </p>
+  <p>Toughness: {{cardDetail.toughness}}
+      <span data-ng-if="!cardDetail.toughness">N/A</span>
+  </p>
+
+  <p>Relevent Imagery:</p>
+  <img data-ng-src="{{cardDetail.imageUrl}}" alt="card image">
+</ion-content>
+
+<ion-footer-bar class="bar-stable">
+  <button class="button button-dark icon-left ion-home" ng-click="goHome()">Home</button>
+</ion-footer-bar>

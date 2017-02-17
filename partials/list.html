@@ -1,0 +1,30 @@
+<ion-header-bar class="bar-calm">
+  <h1 class="title">MTG Cards</h1>
+</ion-header-bar>
+
+<ion-content>
+  <ion-refresher pulling-text="Pull to refresh" refreshing-text="loading..." on-refresh="loadCards()">
+
+  </ion-refresher>
+  <ion-list id="mainList">
+    <p class="introText">Pull down to refresh list.</p>
+
+    <ion-item ng-repeat="card in cards" class="box">
+      <a href="#details/{{card.id}}" class="item">
+
+        <span data-ng-if="card.colors[0]">
+            <img data-ng-src="img/{{card.colors[0]}}.png" alt="Card Colour">
+        </span>
+
+        <span data-ng-if="!card.colors[0]">
+            <img data-ng-src="img/Colorless.png" alt="Card Colour">
+        </span>
+        
+        <h2>{{card.name}}</h2>
+        <!--data-ng-bind-html is incase json has html tags within such as <p> -->
+        <p>Card Type: <span data-ng-bind-html="card.type"></span> </p>
+        <p>Converted Mana Cost: {{card.cmc}}</p>
+      Tap For More Information</a>
+    </ion-item>
+  </ion-list>
+</ion-content>

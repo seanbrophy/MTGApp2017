@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+.introText{
+	text-align: center;
+}
+
+.box{
+	padding: 0;
+}
+
+ion-item.box:hover a {
+  background-color: #E0E0E0;
+}
+
+.box img{
+	float: left;
+	margin-right: 20px;
+	max-width: 80px;
+}
+
+
+.box.ng-enter {
+    -webkit-animation: fadeInLeft .5s;
+    animation: fadeInLeft .5s;
+}
+
+.box.ng-enter-stagger {
+  -webkit-animation-delay:50ms;
+  animation-delay:50ms;
+ 
+  /* override to make sure it's not inherited from other styles */
+  -webkit-animation-duration:0;
+  animation-duration:0;
+}
+
